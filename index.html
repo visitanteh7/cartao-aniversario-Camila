@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Camila!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f9f7fe 0%, #e6e0f8 100%);
+            font-family: 'Playfair Display', serif;
+            padding: 20px;
+            color: #5a3e5a;
+            line-height: 1.6;
+        }
+        
+        .whatsapp-card {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d291bc 0%, #ffdfd3 100%);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floral-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 Q60,5 70,15 T90,15 Q100,25 90,35 T90,55 Q80,65 70,55 T50,55 Q40,65 30,55 T10,55 Q0,45 10,35 T10,15 Q20,5 30,15 Z" fill="%23ffffff"/></svg>');
+            background-size: 150px;
+        }
+        
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 90%;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+        
+        .message p {
+            margin-bottom: 20px;
+            text-indent: 30px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #fce3ec 0%, #fff0f0 100%);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-style: italic;
+            display: inline-block;
+        }
+        
+        .family-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .family-member {
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .family-icon {
+            width: 70px;
+            height: 70px;
+            background: #f8e2e7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+            font-size: 28px;
+            color: #b76e79;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .family-name {
+            font-size: 1rem;
+            color: #7d5a5a;
+            font-weight: bold;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #e0c1d2;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #b76e79;
+        }
+        
+        .heart {
+            color: #e75480;
+            display: inline-block;
+            margin: 0 3px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .whatsapp-button {
+            display: block;
+            width: 90%;
+            max-width: 300px;
+            margin: 30px auto;
+            padding: 15px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+        }
+        
+        .whatsapp-button i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7d5a5a;
+            font-size: 0.9rem;
+        }
+        
+        .year-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(183, 110, 121, 0.8);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2.8rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
+            
+            .family-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+            
+            .signature {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whatsapp-card">
+        <div class="header">
+            <div class="floral-pattern"></div>
+            <div class="year-badge">Desde 2005</div>
+            <div class="title">Feliz Aniversário, Camila!</div>
+            <div class="subtitle">Uma celebração do amor, da família e do crescimento que nos aguarda</div>
+        </div>
+        
+        <div class="content">
+            <div class="message">
+                <p>Querida Camila,</p>
+                
+                <p>Hoje é o seu aniversário, e não poderia deixar de expressar o quanto você é importante na minha vida. Estamos juntos desde 2005 e, desde então, temos trilhado um caminho com altos e baixos, mas sempre com o compromisso de manter nossa família unida. Somos pais da Manu, da Helo e do Samuel <span class="heart">♥</span> presentes preciosos que Deus colocou sob nossa responsabilidade.</p>
+                
+                <p>Hoje, mais do que celebrar a sua vida, quero compartilhar algo que carrego no coração: o desejo profundo de te ver crescer como mulher, como mãe, como pessoa. Não por exigência, mas porque sei que dentro de você existe muito mais do que às vezes você mesma demonstra. <span class="highlight">Eu acredito na sua força, na sua capacidade, no potencial que Deus colocou em você</span>. E acredito que, ao se comprometer com esse crescimento, você pode viver coisas maravilhosas <span class="heart">♥</span> e levar nossa família a um outro nível.</p>
+                
+                <p>O nosso futuro como família depende, sim, do esforço de cada um de nós. E o seu papel é fundamental nisso tudo. Você tem um valor imenso, uma missão importante, e é por isso que eu continuo apostando em você com todo o meu coração.</p>
+                
+                <p>Camila, não escrevo isso como cobrança, mas como um homem que te ama, que sonha com um lar equilibrado, cheio de paz e propósito <span class="heart">♥</span> e que está aqui pra caminhar ao seu lado, ajudar, apoiar, ouvir e encorajar. Você não está sozinha nessa.</p>
+                
+                <p>Feliz aniversário, minha esposa. Que esse novo ciclo marque um novo tempo na sua vida <span class="highlight">mais consciente, mais forte, mais conectada</span> com o que Deus tem pra você. Eu acredito em você, e estou aqui pra te ajudar nessa caminhada.</p>
+            </div>
+            
+            <div class="family-section">
+                <div class="family-member">
+                    <div class="family-icon"><i class="fas fa-female"></i></div>
+                    <div class="family-name">Manu</div>
+                </div>
+                <div class="family-member">
+                    <div class="family-icon"><i class="fas fa-female"></i></div>
+                    <div class="family-name">Helo</div>
+                </div>
+                <div class="family-member">
+                    <div class="family-icon"><i class="fas fa-male"></i></div>
+                    <div class="family-name">Samuel</div>
+                </div>
+            </div>
+            
+            <div class="signature">
+                Com todo meu amor,<br>
+                Seu marido
+            </div>
+            
+            <a href="https://wa.me/?text=Feliz%20Aniversário%20Camila!%20Espero%20que%20tenha%20um%20dia%20maravilhoso%20cheio%20de%20amor%20e%20alegria!%20❤️" class="whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> Compartilhar no WhatsApp
+            </a>
+        </div>
+        
+        <div class="footer">
+            Cartão criado com carinho para Camila ❤️
+        </div>
+    </div>
+
+    <script>
+        // Animação para os corações
+        document.addEventListener('DOMContentLoaded', function() {
+            const hearts = document.querySelectorAll('.heart');
+            hearts.forEach(heart => {
+                // Desfasar as animações
+                const delay = Math.random() * 1.5;
+                heart.style.animationDelay = `${delay}s`;
+            });
+        });
+    </script>
+</body>
+</html>
